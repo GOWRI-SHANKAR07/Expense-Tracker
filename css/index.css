@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2f3542;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    /* border-radius: 20px; */
+}
+
+.ledger {
+    background-color: #00A8E8;
+    padding: 20px;
+    display: grid;
+    flex: 1;
+    color: white;
+    /* border-top-left-radius: 20px; */
+    /* border-bottom-left-radius: 20px; */
+}
+
+.ledger h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.ledger h2 {
+    font-weight: 700px;
+}
+
+.ledger h4,
+.ledger h2,
+.ledger h1 {
+    font-weight: 400;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.inc-exp-cont {
+    display: flex;
+    gap: 25px;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.inc-exp-cont div {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    flex: 1;
+    border-radius: 10px;
+}
+
+.inc-exp-cont div p {
+    font-size: 22px;
+}
+
+.inc-exp-cont div.income {
+    background-color: green;
+}
+
+.inc-exp-cont div.expense {
+    background-color: red;
+}
+
+#form {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.form-control {
+    margin-top: 10px;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+input[type="text"],
+input[type="number"] {
+    border: 1px solid #dedede;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    outline: none;
+    border-radius: 2px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.transaction {
+    flex: 1;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.transaction h2 {
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.trans {
+    list-style-type: none;
+}
+
+.trans li {
+    color: #333;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.trans li.inc {
+    border-left: 4px solid green;
+}
+
+.trans li.exp {
+    border-left: 4px solid red;
+}
+
+.btn-del {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-color: red;
+    border-radius: 20px;
+    left: 205px;
+    top: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.trans li:hover .btn-del {
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2e86de;
+    border-radius: 8px;
+}
