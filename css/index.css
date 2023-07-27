@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,600&display=swap");
 
+/* basic */
 * {
     margin: 0;
     padding: 0;
@@ -145,6 +146,7 @@ input[type="number"] {
     font-weight: 600;
     cursor: pointer;
 }
+   
 
 .trans li.inc {
     border-left: 4px solid green;

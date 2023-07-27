@@ -1,7 +1,7 @@
 // Expense tracker data
 const transactions = [];
 
-// DOM elements
+// dom elements
 const balanceDisplay = document.getElementById('balance');
 const incomeDisplay = document.getElementById('inc-amt');
 const expenseDisplay = document.getElementById('exp-amt');
@@ -17,7 +17,7 @@ function displayTransactions() {
     listItem.classList.add(transaction.amount < 0 ? 'exp' : 'inc');
     listItem.innerHTML = `
       ${transaction.description} <span>₹ ${Math.abs(transaction.amount).toFixed(2)}</span>
-      <button 
+      <button  
         class="del-btn" 
         onclick="deleteTransaction(${transaction.id})">
           X
